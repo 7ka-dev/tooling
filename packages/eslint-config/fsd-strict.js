@@ -17,7 +17,12 @@ export default [
         { type: 'entities', pattern: 'src/entities/**' },
         { type: 'shared',   pattern: 'src/shared/**' },
       ],
-      'boundaries/ignore': ['**/*.test.*', '**/*.spec.*', '**/*.stories.*'],
+      'boundaries/ignore': [
+        '**/*.test.*',
+        '**/*.spec.*',
+        '**/*.stories.*',
+        '**/main.tsx',
+      ],
     },
     rules: {
       'boundaries/element-types': [
@@ -25,12 +30,12 @@ export default [
         {
           default: 'disallow',
           rules: [
-            { from: 'app',      allow: ['pages', 'widgets', 'features', 'entities', 'shared'] },
-            { from: 'pages',    allow: ['widgets', 'features', 'entities', 'shared'] },
-            { from: 'widgets',  allow: ['features', 'entities', 'shared'] },
-            { from: 'features', allow: ['entities', 'shared'] },
-            { from: 'entities', allow: ['shared'] },
-            { from: 'shared',   allow: [] },
+            { from: 'app',      allow: ['app', 'pages', 'widgets', 'features', 'entities', 'shared'] },
+            { from: 'pages',    allow: ['pages', 'widgets', 'features', 'entities', 'shared'] },
+            { from: 'widgets',  allow: ['widgets', 'features', 'entities', 'shared'] },
+            { from: 'features', allow: ['features', 'entities', 'shared'] },
+            { from: 'entities', allow: ['entities', 'shared'] },
+            { from: 'shared',   allow: ['shared'] },
           ],
         },
       ],

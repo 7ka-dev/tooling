@@ -5,6 +5,15 @@ All notable changes to this package will be documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 Versioning follows [semver](https://semver.org/).
 
+## [0.1.5] — 2026-03-11
+
+### Fixed
+
+- Allow same-layer imports in all FSD layers
+- Add `**/main.tsx` to default ignore list in `fsd-strict` and `fsd-light`
+
+---
+
 ## [0.1.4] — 2026-03-11
 
 ### Fixed
