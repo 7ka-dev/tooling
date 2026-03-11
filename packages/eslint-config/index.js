@@ -60,7 +60,6 @@ export default tseslint.config(
       ],
 
       // Unicorn
-      'unicorn/prefer-early-return': 'error',
       'unicorn/no-array-for-each': 'error',
       'unicorn/prefer-query-selector': 'error',
     },

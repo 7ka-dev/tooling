@@ -7,6 +7,14 @@ Versioning follows [semver](https://semver.org/).
 
 ---
 
+## [0.1.1] — 2026-03-11
+
+### Removed
+
+- `unicorn/prefer-early-return` — rule does not exist in `eslint-plugin-unicorn`, was incorrectly added in 0.1.0
+
+---
+
 ## [0.1.0] — 2026-03-11
 
 ### Added
