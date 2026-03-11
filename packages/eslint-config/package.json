@@ -1,7 +1,7 @@
 {
   "name": "@7ka/eslint-config",
   "version": "0.1.0",
-  "description": "Shared ESLint config for 7ka collective",
+  "description": "Strict ESLint flat config for TypeScript + React + FSD projects",
   "type": "module",
   "main": "index.js",
   "exports": {
@@ -17,6 +17,21 @@
   "publishConfig": {
     "access": "public"
   },
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "typescript",
+    "react",
+    "fsd",
+    "feature-sliced"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/7ka-dev/tooling",
+    "directory": "packages/eslint-config"
+  },
+  "homepage": "https://github.com/7ka-dev/tooling/tree/master/packages/eslint-config",
   "peerDependencies": {
     "eslint": ">=9.0.0",
     "typescript-eslint": ">=8.0.0",
