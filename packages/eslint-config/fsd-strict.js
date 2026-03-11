@@ -1,9 +1,40 @@
 import base from './index.js'
-import { createConfig } from '@feature-sliced/eslint-config'
+import boundaries from 'eslint-plugin-boundaries'
 
+/** @type {import('eslint').Linter.Config[]} */
 export default [
   ...base,
-  ...createConfig({
-    layers: ['app', 'pages', 'widgets', 'features', 'entities', 'shared'],
-  }),
+  {
+    plugins: {
+      boundaries,
+    },
+    settings: {
+      'boundaries/elements': [
+        { type: 'app',      pattern: 'src/app/**' },
+        { type: 'pages',    pattern: 'src/pages/**' },
+        { type: 'widgets',  pattern: 'src/widgets/**' },
+        { type: 'features', pattern: 'src/features/**' },
+        { type: 'entities', pattern: 'src/entities/**' },
+        { type: 'shared',   pattern: 'src/shared/**' },
+      ],
+      'boundaries/ignore': ['**/*.test.*', '**/*.spec.*', '**/*.stories.*'],
+    },
+    rules: {
+      'boundaries/element-types': [
+        'error',
+        {
+          default: 'disallow',
+          rules: [
+            { from: 'app',      allow: ['pages', 'widgets', 'features', 'entities', 'shared'] },
+            { from: 'pages',    allow: ['widgets', 'features', 'entities', 'shared'] },
+            { from: 'widgets',  allow: ['features', 'entities', 'shared'] },
+            { from: 'features', allow: ['entities', 'shared'] },
+            { from: 'entities', allow: ['shared'] },
+            { from: 'shared',   allow: [] },
+          ],
+        },
+      ],
+      'boundaries/no-unknown': 'error',
+    },
+  },
 ]
