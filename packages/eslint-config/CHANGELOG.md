@@ -5,6 +5,14 @@ All notable changes to this package will be documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 Versioning follows [semver](https://semver.org/).
 
+## [0.1.3] — 2026-03-11
+
+### Fixed
+
+- Add sidecar `.d.ts` declaration files for `index`, `fsd-strict`, and `fsd-light` exports
+- Update `exports` field in `package.json` to include `types` per export
+
+---
 ---
 
 ## [0.1.1] — 2026-03-11
