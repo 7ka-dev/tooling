@@ -1,6 +1,6 @@
 {
   "name": "@7ka/eslint-config",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Strict ESLint flat config for TypeScript + React + FSD projects",
   "type": "module",
   "main": "index.js",
@@ -9,10 +9,12 @@
     "./fsd-strict": "./fsd-strict.js",
     "./fsd-light": "./fsd-light.js"
   },
+  "types": "index.d.ts",
   "files": [
     "index.js",
     "fsd-strict.js",
-    "fsd-light.js"
+    "fsd-light.js",
+    "index.d.ts"
   ],
   "publishConfig": {
     "access": "public"
