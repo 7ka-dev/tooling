@@ -1,0 +1,13 @@
+{
+  "name": "@7ka/tsconfig",
+  "version": "0.1.0",
+  "description": "Shared TypeScript configs for 7ka collective",
+  "files": [
+    "base.json",
+    "react.json",
+    "next.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
