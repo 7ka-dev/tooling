@@ -18,7 +18,12 @@ export default [
         { type: 'features', pattern: 'src/features/**' },
         { type: 'shared',   pattern: 'src/shared/**' },
       ],
-      'boundaries/ignore': ['**/*.test.*', '**/*.spec.*', '**/*.stories.*'],
+      'boundaries/ignore': [
+        '**/*.test.*',
+        '**/*.spec.*',
+        '**/*.stories.*',
+        '**/main.tsx',
+      ],
     },
     rules: {
       'boundaries/element-types': [
@@ -26,10 +31,10 @@ export default [
         {
           default: 'disallow',
           rules: [
-            { from: 'app',      allow: ['pages', 'features', 'shared'] },
-            { from: 'pages',    allow: ['features', 'shared'] },
-            { from: 'features', allow: ['shared'] },
-            { from: 'shared',   allow: [] },
+            { from: 'app',      allow: ['app', 'pages', 'features', 'shared'] },
+            { from: 'pages',    allow: ['pages', 'features', 'shared'] },
+            { from: 'features', allow: ['features', 'shared'] },
+            { from: 'shared',   allow: ['shared'] },
           ],
         },
       ],
