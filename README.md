@@ -81,6 +81,48 @@ tooling/
 
 ---
 
+## Branch rules
+
+The `master` branch is protected. All changes must go through a pull request.
+
+- No direct pushes to `master`
+- No force pushes
+- Linear history required — rebase before merging
+- At least 1 approval required before merging
+- Stale approvals dismissed when new commits are pushed
+
+### Branch naming
+
+All branches must follow this convention:
+
+| Prefix | When to use |
+|---|---|
+| `feature/` | New rules, new config variants, new packages |
+| `fix/` | Bug fixes, broken rule corrections |
+| `chore/` | Dependency updates, repo maintenance |
+| `docs/` | README, CHANGELOG updates only |
+| `release/` | Version bumps and publish preparation |
+
+Examples: `feature/add-vitest-config`, `fix/fsd-light-pattern`, `docs/tsconfig-readme`
+
+Branches that don't match this pattern are blocked by the `branch-naming` ruleset.
+
+---
+
+## Tags & releases
+
+Published versions are tagged in the format `@scope/package@version`.
+
+```bash
+git tag @7ka/eslint-config@0.1.0
+git tag @7ka/tsconfig@0.1.0
+git push --tags
+```
+
+Tags are protected — they cannot be deleted or force-pushed once created. Always tag **after** publishing to npm, not before.
+
+---
+
 ## Development
 
 ### Setup
