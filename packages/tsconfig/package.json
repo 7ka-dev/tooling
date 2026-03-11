@@ -2,10 +2,27 @@
   "name": "@7ka/tsconfig",
   "version": "0.1.0",
   "description": "Strict TypeScript configs for Vite, React, and Next.js projects",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "./fsd-strict": {
+      "types": "./fsd-strict.d.ts",
+      "default": "./fsd-strict.js"
+    },
+    "./fsd-light": {
+      "types": "./fsd-light.d.ts",
+      "default": "./fsd-light.js"
+    }
+  },
   "files": [
-    "base.json",
-    "react.json",
-    "next.json"
+    "index.js",
+    "index.d.ts",
+    "fsd-strict.js",
+    "fsd-strict.d.ts",
+    "fsd-light.js",
+    "fsd-light.d.ts"
   ],
   "publishConfig": {
     "access": "public"
