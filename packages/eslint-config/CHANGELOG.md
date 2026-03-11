@@ -5,6 +5,15 @@ All notable changes to this package will be documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 Versioning follows [semver](https://semver.org/).
 
+## [0.1.4] — 2026-03-11
+
+### Fixed
+
+- Add missing `fsd-strict.d.ts` and `fsd-light.d.ts` sidecar declarations
+- Update `exports` field to include `types` condition per entry
+
+---
+
 ## [0.1.3] — 2026-03-11
 
 ### Fixed
